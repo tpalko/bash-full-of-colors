@@ -13,8 +13,8 @@ HISTCONTROL=ignoredups:ignorespace
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=200
-HISTFILESIZE=400
+HISTSIZE=20000
+HISTFILESIZE=40000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -28,6 +28,7 @@ if [ -z "${debian_chroot}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
+PROMPT_DIRTRIM=3
 
 # Reset
 Color_Off='\e[0m'       # Text Reset

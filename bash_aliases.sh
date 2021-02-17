@@ -2,7 +2,7 @@
 
 export __LS_OPTIONS='--color=auto -h'
 
-alias ls='ls $__LS_OPTIONS'
+alias ls='ls $__LS_OPTIONS -alrth'
 alias ll='ls $__LS_OPTIONS -l'
 alias la='ls $__LS_OPTIONS -la'
 alias l='ls $__LS_OPTIONS -CF'
@@ -16,7 +16,7 @@ alias bc='bc -l'
 
 
 alias mkdir='mkdir -p -v'
-alias mv='mv -iv'
+alias mv='mv -inv'
 alias rm='rm -Iv --one-file-system --preserve-root'
 
 # function checks if the application is installed
@@ -53,3 +53,6 @@ function allcolors() {
     done
     echo ""
 }
+
+alias gigdirs='du -hd 1 | grep -E "[0-9\.]+G"'
+alias megdirs='du -hd 1 | grep -E "[0-9]{2,3}M"'
